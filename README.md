@@ -1,6 +1,6 @@
 # qkviewReport
 Create a word document from F5 Qkview hosted on iHealth.f5.com
-
+QkviewReport will create sub-folders "qkview_output/customer name"
 
 
 ##  Requirements:
@@ -33,7 +33,6 @@ Retrieving graphs
 Retrieving Diagnostic report data...
 
 
-QkviewReport will create sub-folders "qkview_output/<customer name>"
 
 The file will be created in the customer folder with the naming convention hostname_YYYY-MM-DD.docx, where YYYY-MM-DD is the generation date of the qkview.
 
