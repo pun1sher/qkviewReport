@@ -1,0 +1,290 @@
+{
+    "C114": {
+        "platformName": "800",
+        "CustShipDate": "Jul-2013",
+        "EoS": "01-Apr-2018",
+        "EoNSS": "01-Apr-2020",
+        "EoSS": "01-Apr-2021",
+        "EoTS": "01-Apr-2025"
+    },
+    "C112": {
+        "platformName": "2000",
+        "CustShipDate": "Nov-2012",
+        "EoS": "01-Apr-2018",
+        "EoNSS": "01-Apr-2020",
+        "EoSS": "01-Apr-2021",
+        "EoTS": "01-Apr-2025"
+    },
+    "C113": {
+        "platformName": "4000",
+        "CustShipDate": "Oct-2012",
+        "EoS": "01-Apr-2018",
+        "EoNSS": "01-Apr-2020",
+        "EoSS": "01-Apr-2021",
+        "EoTS": "01-Apr-2025"
+    },
+    "C109": {
+        "platformName": "5xx0",
+        "CustShipDate": "Jun-2014",
+        "EoS": "01-Apr-2018",
+        "EoNSS": "01-Apr-2020",
+        "EoSS": "01-Apr-2021",
+        "EoTS": "01-Apr-2025"
+    },
+    "D110": {
+        "platformName": "7xxx",
+        "CustShipDate": "May-2015",
+        "EoS": "01-Aug-2019",
+        "EoNSS": "01-Aug-2021",
+        "EoSS": "01-Aug-2022",
+        "EoTS": "01-Aug-2026"
+    },
+    "D113": {
+        "platformName": "10xxx",
+        "CustShipDate": "Jul-2014",
+        "EoS": "01-Apr-2018",
+        "EoNSS": "01-Apr-2020",
+        "EoSS": "01-Apr-2021",
+        "EoTS": "01-Apr-2025"
+    },
+    "D112": {
+        "platformName": "10x50",
+        "CustShipDate": "Jan-2016",
+        "EoS": "01-Aug-2019",
+        "EoNSS": "01-Aug-2021",
+        "EoSS": "01-Aug-2022",
+        "EoTS": "01-Aug-2026"
+    },
+    "D111": {
+        "platformName": "12250",
+        "CustShipDate": "Jan-2015",
+        "EoS": "01-Aug-2019",
+        "EoNSS": "01-Aug-2021",
+        "EoSS": "01-Aug-2022",
+        "EoTS": "01-Aug-2026"
+    },
+    "F100": {
+        "platformName": "C2400",
+        "CustShipDate": "Jun-2011",
+        "EoS": "01-Apr-2023",
+        "EoNSS": "01-Apr-2025",
+        "EoSS": "01-Apr-2026",
+        "EoTS": "01-Apr-2030"
+    },
+    "D114": {
+        "platformName": "C2200",
+        "CustShipDate": "May-2014",
+        "EoS": "01-Apr-2023",
+        "EoNSS": "01-Apr-2025",
+        "EoSS": "01-Apr-2026",
+        "EoTS": "01-Apr-2030"
+    },
+    "J102": {
+        "platformName": "J4480",
+        "CustShipDate": "Jun-2012",
+        "EoS": "01-Jan-2026",
+        "EoNSS": "01-Jan-2028",
+        "EoSS": "01-Jan-2029",
+        "EoTS": "01-Jan-2033"
+    },
+    "S100": {
+        "platformName": "C4800",
+        "CustShipDate": "May-2010",
+        "EoS": "01-Jan-2026",
+        "EoNSS": "01-Jan-2028",
+        "EoSS": "01-Jan-2029",
+        "EoTS": "01-Jan-2033"
+    },
+    "A113": {
+        "platformName": "B2150",
+        "CustShipDate": "Dec-2013",
+        "EoS": "01-Apr-2023",
+        "EoNSS": "01-Apr-2025",
+        "EoSS": "01-Apr-2026",
+        "EoTS": "01-Apr-2030"
+    },
+    "A112": {
+        "platformName": "B2250",
+        "CustShipDate": "Oct-2014",
+        "EoS": "01-Apr-2023",
+        "EoNSS": "01-Apr-2025",
+        "EoSS": "01-Apr-2026",
+        "EoTS": "01-Apr-2030"
+    },
+    "A108": {
+        "platformName": "B4350",
+        "CustShipDate": "Jul-2012",
+        "EoS": "01-Apr-2018",
+        "EoNSS": "01-Apr-2020",
+        "EoSS": "01-Apr-2021",
+        "EoTS": "01-Apr-2025"
+    },
+    "A110": {
+        "platformName": "B4350N",
+        "CustShipDate": "Jul-2013",
+        "EoS": "1-Jul-2018",
+        "EoNSS": "01-Jul-2020",
+        "EoSS": "01-Jul-2021",
+        "EoTS": "01-Jul-2025"
+    },
+    "A114": {
+        "platformName": "B4450",
+        "CustShipDate": "Jun-2016",
+        "EoS": "01-Jan-2026",
+        "EoNSS": "01-Jan-2028",
+        "EoSS": "01-Jan-2029",
+        "EoTS": "01-Jan-2033"
+    },
+    "C117": {
+        "platformName": "i2x00",
+        "CustShipDate": "Nov-2016",
+        "EoS": "01-Jan-2024",
+        "EoNSS": "01-Jan-2026",
+        "EoSS": "01-Jan-2027",
+        "EoTS": "01-Jan-2031"
+    },
+    "C115": {
+        "platformName": "i4x00",
+        "CustShipDate": "Nov-2016",
+        "EoS": "01-Jan-2024",
+        "EoNSS": "01-Jan-2026",
+        "EoSS": "01-Jan-2027",
+        "EoTS": "01-Jan-2031"
+    },
+    "C119": {
+        "platformName": "i5x00",
+        "CustShipDate": "Sep-2016",
+        "EoS": "01-Jan-2024",
+        "EoNSS": "01-Jan-2026",
+        "EoSS": "01-Jan-2027",
+        "EoTS": "01-Jan-2031"
+    },
+    "C125": {
+        "platformName": "i5820",
+        "CustShipDate": "Jun-2018",
+        "EoS": "01-Jan-2026",
+        "EoNSS": "01-Jan-2028",
+        "EoSS": "01-Jan-2029",
+        "EoTS": "01-Jan-2033"
+    },
+    "C118": {
+        "platformName": "i7x00",
+        "CustShipDate": "Sep-2018",
+        "EoS": "01-Jan-2024",
+        "EoNSS": "01-Jan-2026",
+        "EoSS": "01-Jan-2027",
+        "EoTS": "01-Jan-2031"
+    },
+    "C126": {
+        "platformName": "i7820",
+        "CustShipDate": "Jun-2018",
+        "EoS": "01-Jan-2026",
+        "EoNSS": "01-Jan-2028",
+        "EoSS": "01-Jan-2029",
+        "EoTS": "01-Jan-2033"
+    },
+    "C116": {
+        "platformName": "i10x00",
+        "CustShipDate": "Sep-2016",
+        "EoS": "01-Jan-2024",
+        "EoNSS": "01-Jan-2026",
+        "EoSS": "01-Jan-2027",
+        "EoTS": "01-Jan-2031"
+    },
+    "C124": {
+        "platformName": "i11x00-DS",
+        "CustShipDate": "Jun-2018",
+        "EoS": "01-Oct-2024",
+        "EoNSS": "01-Oct",
+        "EoSS": "2026",
+        "EoTS": "01-Oct-2027"
+    },
+    "C123": {
+        "platformName": "i11x00",
+        "CustShipDate": "Jan-2018",
+        "EoS": "01-Jan-2024",
+        "EoNSS": "01-Jan-2026",
+        "EoSS": "01-Jan-2027",
+        "EoTS": "01-Jan-2031"
+    },
+    "D116": {
+        "platformName": "i15x00",
+        "CustShipDate": "Mar-2018",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "C130": {
+        "platformName": "r2x00",
+        "CustShipDate": "Jun-2022",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "C131": {
+        "platformName": "r4x00",
+        "CustShipDate": "Jun-2022",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "C129": {
+        "platformName": "r5x00",
+        "CustShipDate": "Mar-2022",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "C128": {
+        "platformName": "r10x00",
+        "CustShipDate": "Mar-2022",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "C138": {
+        "platformName": "r12x00-DS",
+        "CustShipDate": "Oct-2023",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "F101": {
+        "platformName": "CX410",
+        "CustShipDate": "Apr-2021",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "A118": {
+        "platformName": "BX110",
+        "CustShipDate": "Apr-2021",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "R100": {
+        "platformName": "CX1610",
+        "CustShipDate": "Oct-2023",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    },
+    "A119": {
+        "platformName": "BX520",
+        "CustShipDate": "Oct-2023",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
+    }
+}
