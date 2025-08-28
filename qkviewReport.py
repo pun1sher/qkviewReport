@@ -148,9 +148,9 @@ def retrieveUptime(qkvNum) -> tuple:
     else:
         return 'Uptime',''
 
-def retrieveModuleProvisioning(qkvNum) -> tuple:
+def retrieveModuleProvisioning(qkvNum):
     # retrieving module provisioning
-    modulesProvisioned = ()
+    modulesProvisioned = ''
     url = f'{baseIhealthApiURL}/commands/c12723edf7dedb01e5430fe6077a12ec07ef4e14'
     response = requests.request("GET", url, headers=headers)
     if response.status_code != 200:
@@ -165,7 +165,10 @@ def retrieveModuleProvisioning(qkvNum) -> tuple:
             elif line.startswith('    level'):
                 gb, level = line.strip().split('level ')
                 if level != 'none':
-                    modulesProvisioned += (modName,level)
+                    if modulesProvisioned == '':
+                        modulesProvisioned = modName
+                    else:
+                        modulesProvisioned += f', {modName}'
     return modulesProvisioned
             
 def retrieveVersion(qkviewNum) -> tuple:
@@ -228,6 +231,7 @@ def retrieveDeviceInfo(qkvNum)-> tuple:
     deviceInfo = [
         ('hostName', hostName),
         ('serialNumber', chassisSerial),
+        ('provisionModules', provisionModules),
         ('vcpuCount', cpuMemory[0][1]),
         ('memory', str(cpuMemory[1][1])),
         ('firmwareVersion', firmwareVersion),
@@ -421,7 +425,7 @@ print('Retrieving Object Counts')
 object_counts = retrieveObjectCounts(qkviewNum)
 
 print('Retrieving graphs')
-graph_objects = retrieveGraphs(qkviewNum, device_info[0][1], device_info[5][1] )
+graph_objects = retrieveGraphs(qkviewNum, device_info[0][1], device_info[6][1] )
 
 print('Retrieving Diagnostic report data...')
 diags = retrieveDiagReport(qkviewNum)

@@ -15,7 +15,7 @@ class docxgen:
     def create_device_report(self, device_info, license_info, cfg_interfaces, object_counts, graph_objects, diags) -> str:
         """Create comprehensive device report"""
         hostName = device_info[0][1]
-        qkviewDate = device_info[5][1]
+        qkviewDate = device_info[6][1]
         qkvDate = datetime.strftime(datetime.strptime(qkviewDate, "%Y-%m-%d %H:%M:%S"), "%Y-%m-%d")
 
         document = Document()
