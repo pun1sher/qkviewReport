@@ -15,7 +15,7 @@ class docxgen:
     def create_device_report(self, device_info, license_info, cfg_interfaces, object_counts, graph_objects, diags) -> str:
         """Create comprehensive device report"""
         hostName = device_info[0][1]
-        qkviewDate = device_info[6][1]
+        qkviewDate = device_info[7][1]
         qkvDate = datetime.strftime(datetime.strptime(qkviewDate, "%Y-%m-%d %H:%M:%S"), "%Y-%m-%d")
 
         document = Document()
@@ -56,7 +56,7 @@ class docxgen:
     def _add_device_info_table(self, document, device_info):
         """Add device information table to document"""
         document.add_heading('Device Information', level=2)
-        table = document.add_table(rows=8, cols=2, style='TableGrid')
+        table = document.add_table(rows=9, cols=2, style='TableGrid')
         
         for i, (key, value) in enumerate(device_info):
             table.cell(i, 0).text = key

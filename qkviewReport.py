@@ -5,6 +5,11 @@ import json,os
 import requests,re,sys
 import xmltodict, base64
 
+'''
+Version 2 - 03Sept2025 - Add support to retrieve device failover status
+
+'''
+
 oauth_clientId = os.getenv('IHF5_CLIENT')
 oauth_client_secret = os.getenv('IHF5_SECRET')
 oauth_client = oAuthClient('https://identity.account.f5.com/oauth2/ausp95ykc80HOU7SQ357/v1/token')
@@ -199,6 +204,19 @@ def retrieveCPUandMemory(qkvNum) -> tuple:
         cpuMemory = [('vCPU Count', vCPUcount), ('Memory', memSize)]
         return cpuMemory
 
+def retrieveFailoverStatus(qkviewNum) -> str:
+    # retrieve device failover status (active, standby, standalone)
+
+    url = f'{baseIhealthApiURL}/commands/e161b8be18af33223a4f3b345aa6d6ca9645dcdf'
+    response = requests.request("GET", url,  headers=headers)
+    if response.status_code == 200:
+        decoded_cmdOut = decodeQkviewCommands(response.text)   
+        lines = decoded_cmdOut.split('\n')
+        (gb,failoverStatus) = lines[4].split('   ')
+        return failoverStatus
+    
+
+
 def retrieveDeviceInfo(qkvNum)-> tuple:
     '''
     Retrieve device level information (CPUs, Memory, provisioned modules, serial number)
@@ -219,6 +237,8 @@ def retrieveDeviceInfo(qkvNum)-> tuple:
     gDate2 = int(gDate) / 1000.0
     qkviewDate = datetime.fromtimestamp(gDate2).strftime("%Y-%m-%d %H:%M:%S")
 
+    # retrieve failover status
+    failoverState = retrieveFailoverStatus(qkvNum)
     # retrieve uptime
     (uptimeMsg, uptime) = retrieveUptime(qkvNum)
     # retrieve firmware version
@@ -227,10 +247,12 @@ def retrieveDeviceInfo(qkvNum)-> tuple:
     provisionModules = retrieveModuleProvisioning(qkvNum)
     # retrieve CPU and Memory
     cpuMemory = retrieveCPUandMemory(qkvNum)
+ 
 
     deviceInfo = [
         ('hostName', hostName),
         ('serialNumber', chassisSerial),
+        ('failoverState', failoverState),
         ('provisionModules', provisionModules),
         ('vcpuCount', cpuMemory[0][1]),
         ('memory', str(cpuMemory[1][1])),
@@ -415,7 +437,8 @@ cmdDict = {
 #retrieve device level information
 print('Retrieving Device Information')
 device_info = retrieveDeviceInfo(qkviewNum)
-
+deviceName = device_info[0][1]
+qkvwDate = device_info[7][1]
 #retrieve licensing and platform lifecycle (if hardware)
 print('Retrieving Licensing Information')
 license_info, interfaces = retrieveLicenseInfo(qkviewNum)
@@ -425,7 +448,7 @@ print('Retrieving Object Counts')
 object_counts = retrieveObjectCounts(qkviewNum)
 
 print('Retrieving graphs')
-graph_objects = retrieveGraphs(qkviewNum, device_info[0][1], device_info[6][1] )
+graph_objects = retrieveGraphs(qkviewNum, deviceName, qkvwDate )
 
 print('Retrieving Diagnostic report data...')
 diags = retrieveDiagReport(qkviewNum)

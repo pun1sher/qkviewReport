@@ -119,6 +119,14 @@
         "EoSS": "01-Apr-2021",
         "EoTS": "01-Apr-2025"
     },
+    "A109": {
+        "platformName": "B2100",
+        "CustShipDate": "Jan-2012",
+        "EoS": "01-Oct-2015",
+        "EoNSS": "01-Oct-2017",
+        "EoSS": "01-Oct-2018",
+        "EoTS": "01-Oct-2022"
+    },
     "A110": {
         "platformName": "B4350N",
         "CustShipDate": "Jul-2013",
