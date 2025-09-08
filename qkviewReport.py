@@ -7,6 +7,7 @@ import xmltodict, base64
 
 '''
 Version 2 - 03Sept2025 - Add support to retrieve device failover status
+Version 2.1 - 06Sept2025 - Add SSL TPS Graph 
 
 '''
 
@@ -324,6 +325,7 @@ def retrieveGraphs(qkvnum, hostName, qkviewDate) -> list:
         'system_CPU': 'CPU',
         'cpu_plane': 'detailplanestat',
         'memory_breakdown': 'memorybreakdown',
+        'ssl_tps': 'SSLTPSGraph',
         'new_connections': 'newcons',
         'throughput': 'throughput'
     }

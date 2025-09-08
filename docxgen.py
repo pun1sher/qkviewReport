@@ -132,6 +132,10 @@ class docxgen:
                 document.add_heading('CPU Usage By Core', level=3)
             elif 'system' in img:
                 document.add_heading('System CPU Usage', level=3)
+            elif 'plane' in img:
+                document.add_heading('CPU Plane Usage', level=3)
+            elif 'ssl' in img:
+                document.add_heading('SSL TPS', level=3)
             elif 'memory' in img:
                 document.add_heading('Memory Breakdown', level=3)
             elif 'new_connections' in img:
