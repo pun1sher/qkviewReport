@@ -150,7 +150,7 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
  
         return licenseInfo, interfaces
   
- def retrieveUptime(qkvNum) -> tuple:
+def retrieveUptime(qkvNum) -> tuple:
     # retrieve and parse the proc_module.xml
     url = f'{baseIhealthApiURL}/files/cHJvY19tb2R1bGUueG1s'
     response = requests.request("GET", url, headers=headers)
