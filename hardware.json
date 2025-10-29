@@ -294,5 +294,13 @@
         "EoNSS": "None",
         "EoSS": "None",
         "EoTS": "None"
+    },
+    "Z100": {
+        "platformName": "VE",
+        "CustShipDate": "Oct-2023",
+        "EoS": "None",
+        "EoNSS": "None",
+        "EoSS": "None",
+        "EoTS": "None"
     }
 }
