@@ -148,7 +148,7 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
         interfaces = ['vCMP Guests/F5OS Tenants do not have traditional interface assignments']
  
  
-      return licenseInfo, interfaces
+        return licenseInfo, interfaces
   
  def retrieveUptime(qkvNum) -> tuple:
     # retrieve and parse the proc_module.xml
