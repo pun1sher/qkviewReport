@@ -98,7 +98,7 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
         lines = file.splitlines(keepends=True)
         regKey = re.findall(r'Registration Key\s+([A-Z-]*)', lines[2])[0]
         platformId = re.findall(r'ID\s+([A|C|D|J|S|Z]1[0-3][0-9])',lines[5])[0]
-        if  platformId.startswith('Z100') and   'VE Subs' in file:
+        if  platformId.startswith('BIG-IQ') and   'VE Subs' in file:
             versionPlus = 'VE Subscription'
             licenseInfo = [
              ('Registration Key', regKey),
