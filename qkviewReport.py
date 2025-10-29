@@ -83,13 +83,13 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
     Retrieve the show sys license detail page
     extract the Registration Key, Platform ID and Exclusive Version fields
     If platform ID doesn't start with Z we will include platform lifecycle information
-
+ 
     '''
     with open('hardware.json') as hwLifeFile:
         hwLifecycle = json.load(hwLifeFile)
-
+ 
     url = f'{baseIhealthApiURL}/commands/777eb20f70ba1e04308c07d46c40c2c53748dbb2'
-
+ 
     response = requests.request("GET", url, headers=headers)
     if response.status_code != 200:
         print('Error: {response.status_code}')
@@ -97,8 +97,12 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
         file = decodeQkviewCommands(response.text)
         lines = file.splitlines(keepends=True)
         regKey = re.findall(r'Registration Key\s+([A-Z-]*)', lines[2])[0]
-        platformId = re.findall(r'ID\s+([A|C|D|J|S|Z]1[0-3][0-9])',lines[5])[0]
-        if  platformId.startswith('BIG-IQ') and   'VE Subs' in file:
+        if 'BIG-IQ-Pool' in lines[5]:
+            platformId = 'BIG-IQ-Pool'
+        else:
+            platformId = re.findall(r'ID\s+([A|C|D|J|S|Z]1[0-3][0-9])',lines[5])[0]
+ 
+        if  platformId.startswith('Z100') and   'VE Subs' in file:
             versionPlus = 'VE Subscription'
             licenseInfo = [
              ('Registration Key', regKey),
@@ -106,7 +110,7 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
              ('VE Type', versionPlus)   
             ]            
         elif platformId.startswith('Z1'):
-            fields = lines[15].strip().split(', ') 
+            fields = lines[15].strip().split(', ')
             if fields[1].endswith('15.X'):
                 versionPlus = 'V13'
             elif fields[1].endswith('16.X'):
@@ -119,6 +123,12 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
              ('Platform ID', platformId),
              ('VE Type', versionPlus)   
             ]
+        elif platformId.startswith('BIG-IQ'):
+            licenseInfo = [
+             ('Registration Key', regKey),
+             ('Platform ID', platformId),
+             ('VE Type', 'FCP')
+            ]  
         else:
             hwLife = hwLifecycle[platformId]  
             licenseInfo = [
@@ -136,11 +146,11 @@ def retrieveLicenseInfo(qkvNum:int)-> tuple:
         interfaces = retrieveInterfaces(qkviewNum)
     else:
         interfaces = ['vCMP Guests/F5OS Tenants do not have traditional interface assignments']
-
-
+ 
+ 
     return licenseInfo, interfaces
-
-def retrieveUptime(qkvNum) -> tuple:
+  
+ def retrieveUptime(qkvNum) -> tuple:
     # retrieve and parse the proc_module.xml
     url = f'{baseIhealthApiURL}/files/cHJvY19tb2R1bGUueG1s'
     response = requests.request("GET", url, headers=headers)
